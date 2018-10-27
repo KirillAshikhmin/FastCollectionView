@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FCViewSample"
+             x:Class="FCViewSample.MainPage">
+
+    <StackLayout x:Name="_mainLayout">
+        <!-- Place new controls here -->
+        <Label Text="Welcome to Fast collection view sample app!" 
+           HorizontalOptions="Center"
+               Margin="16,32,16,16"
+               />
+        <Button HorizontalOptions="FillAndExpand" Text="Sample 1" Clicked="GoToSample1" Margin="16"/>
+    </StackLayout>
+
+</ContentPage>
