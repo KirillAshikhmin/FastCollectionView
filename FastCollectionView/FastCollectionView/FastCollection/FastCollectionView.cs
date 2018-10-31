@@ -26,7 +26,6 @@ namespace Binwell.Controls.FastCollectionView.FastCollection
 	    IGridViewProvider _gridViewProvider;
 
         public bool SelectionEnabled { get; set; } = true;
-        public bool PullToRefreshFunctionalityEnabled { get; set; }
         public bool CollectionChangedWithoutAnimation { get; set; }
 
         public event EventHandler<FastCollectionEventArgs<object>> ItemSelected;
@@ -86,7 +85,7 @@ namespace Binwell.Controls.FastCollectionView.FastCollection
         public static readonly BindableProperty IsRefreshingProperty = BindableProperty.Create(nameof(IsRefreshing),
             typeof(bool), typeof(FastCollectionView), false);
 
-	    public static readonly BindableProperty RefreshTopOffsetProperty = BindableProperty.Create(nameof(RefreshTopOffset), typeof(double), typeof(FastCollectionView), default(double), BindingMode.Default);
+	    public static readonly BindableProperty RefreshTopOffsetProperty = BindableProperty.Create(nameof(RefreshTopOffset), typeof(double), typeof(FastCollectionView), -1d, BindingMode.Default);
 
 		
 	    public static readonly BindableProperty GetScrollPositionCommandProperty = BindableProperty.Create(nameof(GetScrollPositionCommand), typeof(ICommand), typeof(FastCollectionView), default(ICommand), BindingMode.Default);
@@ -223,7 +222,7 @@ namespace Binwell.Controls.FastCollectionView.FastCollection
         public bool IsRefreshing
         {
             get => (bool) GetValue(IsRefreshingProperty);
-	        private set => SetValue(IsRefreshingProperty, value);
+	        set => SetValue(IsRefreshingProperty, value);
         }
 
         public void RaiseLoadMoreEvent()

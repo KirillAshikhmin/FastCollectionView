@@ -70,9 +70,10 @@ namespace Binwell.Controls.FastCollectionView.Droid.Renderers.FastCollection
 				refresh.IsPullToRefreshEnabled = e.NewElement.IsPullToRefreshEnabled;
 				_originalRefreshOffset = refresh.ProgressViewStartOffset;
 
+                if (Element.RefreshTopOffset!=-1) {
 				refresh.SetProgressViewOffset(true, _originalRefreshOffset,
 					(int) ((e.NewElement.RefreshTopOffset) * _density));
-
+                }
 				refresh.AddView(_recyclerView, LayoutParams.MatchParent);
 				_refresh = refresh;
 				SetNativeControl(_refresh);
@@ -136,10 +137,13 @@ namespace Binwell.Controls.FastCollectionView.Droid.Renderers.FastCollection
 			{
 				if (_refresh != null && Element != null)
 				{
-					_refresh.Refreshing = false;
-					var size = (int) (Element.RefreshTopOffset * _density);
-					_refresh.SetProgressViewOffset(true, 0, size);
-					_refresh.Refreshing = Element.IsRefreshing;
+				    if (Element.RefreshTopOffset != -1)
+				    {
+				        _refresh.Refreshing = false;
+				        var size = (int) (Element.RefreshTopOffset * _density);
+				        _refresh.SetProgressViewOffset(true, 0, size);
+				        _refresh.Refreshing = Element.IsRefreshing;
+				    }
 				}
 			}
 			else if (e.PropertyName == FastCollectionView.FastCollection.FastCollectionView.LoadMoreCommandProperty

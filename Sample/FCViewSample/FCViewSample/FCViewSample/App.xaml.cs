@@ -7,11 +7,9 @@ namespace FCViewSample
 {
 	public partial class App : Application
 	{
-		public static Size ScreenSize { get; private set; }
 
-		public App(Size screenSize)
+		public App()
 		{
-			ScreenSize = screenSize;
 			InitializeComponent();
 
 			MainPage = new NavigationPage(new MainPage());

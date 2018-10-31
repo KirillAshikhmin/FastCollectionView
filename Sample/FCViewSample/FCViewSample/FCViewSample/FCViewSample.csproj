@@ -12,10 +12,23 @@
   <ItemGroup>
     <PackageReference Include="LiveSharp" Version="1.0.57" />
     <PackageReference Include="LiveXAML" Version="2.1.44" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.3.840" />
     <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\FastCollectionView\FastCollectionView\FastCollectionView.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Cells\CategoryCell.xaml.cs">
+      <DependentUpon>CategoryCell.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Cells\CategoryCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

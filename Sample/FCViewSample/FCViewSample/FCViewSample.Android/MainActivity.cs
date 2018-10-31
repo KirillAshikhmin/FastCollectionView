@@ -1,12 +1,8 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+
 using Android.OS;
-using Xamarin.Forms;
+using Plugin.CurrentActivity;
 
 namespace FCViewSample.Droid
 {
@@ -20,12 +16,9 @@ namespace FCViewSample.Droid
 
             base.OnCreate(savedInstanceState);
             Xamarin.Forms.Forms.Init(this, savedInstanceState);
-
-	        var outSize = new Android.Graphics.Point();
-	        WindowManager.DefaultDisplay.GetSize(outSize);
-	        var density = Resources.DisplayMetrics.Density;
-	        var size = new Size(outSize.X / density, outSize.Y / density);
-	        LoadApplication(new App(size));
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
+            LoadApplication(new App());
         }
     }
 }

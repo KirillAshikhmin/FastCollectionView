@@ -24,7 +24,8 @@ namespace FCViewSample.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-	        LoadApplication(new App(new Size(UIScreen.MainScreen.Bounds.Width, UIScreen.MainScreen.Bounds.Height)));
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
+            LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
         }
