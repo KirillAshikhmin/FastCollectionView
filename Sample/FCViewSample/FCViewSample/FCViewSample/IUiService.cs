@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace FCViewSample
+namespace FCViewSample.Core
 {
     public interface IUiService
     {

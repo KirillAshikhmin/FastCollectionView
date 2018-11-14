@@ -1,4 +1,5 @@
-﻿using FCViewSample.iOS;
+﻿using FCViewSample.Core;
+using FCViewSample.iOS;
 using UIKit;
 using Xamarin.Forms;
 

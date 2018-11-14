@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FCViewSample.DataObjects
+﻿namespace FCViewSample.Core.DataObjects
 {
     public class ProductObject
     {

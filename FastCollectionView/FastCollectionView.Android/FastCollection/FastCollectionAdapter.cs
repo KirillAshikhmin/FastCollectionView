@@ -8,13 +8,14 @@ using Android.Support.V4.Widget;
 using Android.Support.V7.Widget;
 using Android.Util;
 using Android.Views;
+using Binwell.Controls.FastCollectionView.Droid.Renderers.FastCollection;
 using Binwell.Controls.FastCollectionView.FastCollection;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Size = Xamarin.Forms.Size;
 using View = Android.Views.View;
 
-namespace Binwell.Controls.FastCollectionView.Droid.Renderers.FastCollection {
+namespace Binwell.Controls.FastCollectionView.Droid.FastCollection {
 	public class FastCollectionAdapter : RecyclerView.Adapter {
 		readonly RecyclerView _recyclerView;
 		IEnumerable _items;

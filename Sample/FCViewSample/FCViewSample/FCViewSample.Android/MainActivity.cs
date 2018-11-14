@@ -2,6 +2,7 @@
 using Android.Content.PM;
 
 using Android.OS;
+using FCViewSample.Core;
 using Plugin.CurrentActivity;
 
 namespace FCViewSample.Droid

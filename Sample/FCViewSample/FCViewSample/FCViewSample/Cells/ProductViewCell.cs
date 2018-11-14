@@ -1,9 +1,9 @@
 ﻿using Binwell.Controls.FastCollectionView.FastCollection;
-using FCViewSample.DataObjects;
+using FCViewSample.Core.DataObjects;
 using FFImageLoading.Forms;
 using Xamarin.Forms;
 
-namespace FCViewSample.Cells
+namespace FCViewSample.Core.Cells
 {
     public class ProductViewCell : FastCollectionCell
     {
@@ -24,9 +24,14 @@ namespace FCViewSample.Cells
             };
             _name = new Label
             {
-                HorizontalOptions = LayoutOptions.Center
+                HorizontalOptions = LayoutOptions.Center,
+                FontSize = 20,
+                TextColor = Color.Black
             };
-            _price = new Label { HorizontalOptions = LayoutOptions.Center };
+            _price = new Label { HorizontalOptions = LayoutOptions.Center,
+                FontSize = 14,
+                TextColor = Color.Black
+            };
             View = new StackLayout
             {
                 BackgroundColor = Color.White,
@@ -45,6 +50,7 @@ namespace FCViewSample.Cells
         protected override void SetupCell(bool isRecycled)
         {
             if (!(BindingContext is ProductObject bindingContext)) return;
+            _image.Source = null;
             _image.Source = bindingContext.ImageUrl;
             _name.Text = bindingContext.Name;
             _price.Text = bindingContext.Price;

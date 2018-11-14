@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using Binwell.Controls.FastCollectionView.FastCollection;
-using Binwell.Controls.FastCollectionView.iOS.Renderers.FastCollection;
+using Binwell.Controls.FastCollectionView.iOS.FastCollection;
 using CoreGraphics;
 using Foundation;
 using ObjCRuntime;
@@ -18,7 +18,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(FastCollectionView), typeof(FastCollectionViewRenderer))]
-namespace Binwell.Controls.FastCollectionView.iOS.Renderers.FastCollection
+namespace Binwell.Controls.FastCollectionView.iOS.FastCollection
 {
     public class FastCollectionViewRenderer : ViewRenderer<FastCollectionView.FastCollection.FastCollectionView, FastUiCollectionView>, IGridViewProvider
     {
@@ -26,6 +26,11 @@ namespace Binwell.Controls.FastCollectionView.iOS.Renderers.FastCollection
 	    FastUiCollectionView _fastUiCollectionView;
 	    NSIndexPath _initialIndex;
 	    UIRefreshControl _refreshControl;
+
+        public static void Init()
+        {
+            var temp = DateTime.Now;
+        }
 
         public IList Source
         {

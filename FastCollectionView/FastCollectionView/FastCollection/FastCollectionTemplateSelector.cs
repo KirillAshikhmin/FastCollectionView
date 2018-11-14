@@ -26,11 +26,15 @@ namespace Binwell.Controls.FastCollectionView.FastCollection
             var key = item.GetType().Name;
             return DataTemplates.FirstOrDefault(dt => dt.Key == key);
         }
-
-	    public FastCollectionTemplateSelector Add(FastCollectionDataTemplate dataTemplate) {
-		    DataTemplates.Add(dataTemplate);
+        
+	    public FastCollectionTemplateSelector Add(params FastCollectionDataTemplate[] dataTemplates) {
+	        foreach (var dataTemplate in dataTemplates)
+	        {
+	            DataTemplates.Add(dataTemplate);
+            }
 		    return this;
 	    }
+
         public FastCollectionTemplateSelector Prepare()
         {
             DataTemplateViewTypes.Clear();

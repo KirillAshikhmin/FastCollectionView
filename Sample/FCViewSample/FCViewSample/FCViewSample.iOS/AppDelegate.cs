@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Binwell.Controls.FastCollectionView.iOS.FastCollection;
+using FCViewSample.Core;
 using Foundation;
 using UIKit;
 using Xamarin.Forms;
@@ -25,6 +26,7 @@ namespace FCViewSample.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
+            FastCollectionViewRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

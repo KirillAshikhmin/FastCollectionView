@@ -1,11 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:FCViewSample"
              xmlns:fastCollection="clr-namespace:Binwell.Controls.FastCollectionView.FastCollection;assembly=Binwell.Controls.FastCollectionView"
-             x:Class="FCViewSample.MainPage" Title="Fast Collestion View Sample">
+             x:Class="FCViewSample.Core.MainPage" Title="Fast Collection View Sample">
 
-    <fastCollection:FastCollectionView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsPullToRefreshEnabled="True" x:Name="collectionView"/>
-   
+    <fastCollection:FastCollectionView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                                       IsPullToRefreshEnabled="True" x:Name="collectionView"
+                                       ItemsSource="{Binding ItemsSource}" 
+                                       LoadMoreCommand="{Binding LoadMoreCommand}"
+                                       ItemSelectedCommand="{Binding ItemSelectedCommand}"
+                                       RefreshCommand="{Binding RefreshCommand}"
+                                       IsRefreshing="{Binding IsBusy}"/>
 
 </ContentPage>

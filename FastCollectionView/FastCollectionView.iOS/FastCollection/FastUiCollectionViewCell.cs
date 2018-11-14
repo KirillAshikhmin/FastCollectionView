@@ -12,7 +12,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Platform.iOS;
 
-namespace Binwell.Controls.FastCollectionView.iOS.Renderers.FastCollection {
+namespace Binwell.Controls.FastCollectionView.iOS.FastCollection {
 	public sealed class FastUiCollectionViewCell : UICollectionViewCell {
 		UIView _view;
 		object _originalBindingContext;
@@ -33,7 +33,7 @@ namespace Binwell.Controls.FastCollectionView.iOS.Renderers.FastCollection {
 				view.Layout(size);
 				return viewGroup;
 			}
-			catch (Exception e) {
+			catch {
 				return new UIView(new CGRect(0, 0, 1, 1));
 			}
 		}

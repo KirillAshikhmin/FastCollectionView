@@ -9,7 +9,7 @@ using CoreGraphics;
 using Foundation;
 using UIKit;
 
-namespace Binwell.Controls.FastCollectionView.iOS.Renderers.FastCollection
+namespace Binwell.Controls.FastCollectionView.iOS.FastCollection
 {
     public class FastUiCollectionViewDelegate : UICollectionViewDelegateFlowLayout
     {

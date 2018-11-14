@@ -152,7 +152,7 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.3.840</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
+    <PackageReference Include="Xamarin.Forms" Version="3.3.0.967583" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -167,7 +167,7 @@
       <Name>FastCollectionView</Name>
     </ProjectReference>
     <ProjectReference Include="..\FCViewSample\FCViewSample.csproj">
-      <Project>{F036EA1E-DBA6-4E38-8FB2-219B7CDFE4BF}</Project>
+      <Project>{FC5821C5-BCDD-4905-A242-F318B2677C5D}</Project>
       <Name>FCViewSample</Name>
     </ProjectReference>
   </ItemGroup>

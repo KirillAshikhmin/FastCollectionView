@@ -6,7 +6,7 @@
 using CoreGraphics;
 using UIKit;
 
-namespace Binwell.Controls.FastCollectionView.iOS.Renderers.FastCollection
+namespace Binwell.Controls.FastCollectionView.iOS.FastCollection
 {
     public sealed class FastUiCollectionView : UICollectionView
     {

@@ -3,7 +3,7 @@ using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
-namespace FCViewSample
+namespace FCViewSample.Core
 {
 	public partial class App : Application
 	{

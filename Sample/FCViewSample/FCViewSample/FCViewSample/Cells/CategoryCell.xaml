@@ -2,7 +2,7 @@
 <fastCollection:FastCollectionCell xmlns="http://xamarin.com/schemas/2014/forms"
                                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                                    xmlns:fastCollection="clr-namespace:Binwell.Controls.FastCollectionView.FastCollection;assembly=Binwell.Controls.FastCollectionView"
-                                   x:Class="FCViewSample.Cells.CategoryCell">
+                                   x:Class="FCViewSample.Core.Cells.CategoryCell">
     <StackLayout Padding="16" BackgroundColor="#F1F2F3">
         <Label Text="{Binding Name}" VerticalTextAlignment="Center" FontSize="24"/>
     </StackLayout>

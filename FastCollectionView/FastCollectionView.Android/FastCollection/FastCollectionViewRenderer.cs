@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Support.V4.Widget;
 using Android.Support.V7.Widget;
 using Android.Util;
+using Binwell.Controls.FastCollectionView.Droid.FastCollection;
 using Binwell.Controls.FastCollectionView.Droid.Renderers.FastCollection;
 using Binwell.Controls.FastCollectionView.FastCollection;
 using Xamarin.Forms;
@@ -217,8 +218,8 @@ namespace Binwell.Controls.FastCollectionView.Droid.Renderers.FastCollection
 
 			var itemTemplate = Element.ItemTemplateSelector;
 			if (!(itemTemplate is FastCollectionTemplateSelector templateSelector)) return;
-
-			var width = Element.Width;
+		    templateSelector.Prepare();
+            var width = Element.Width;
 			var widths = templateSelector.DataTemplates.Select(t => t.CellSize.Width);
 			_columns = Math.Max(1, widths.Max(w => (int) (width / w)));
 

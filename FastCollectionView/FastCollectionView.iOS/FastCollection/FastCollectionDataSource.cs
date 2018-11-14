@@ -7,7 +7,7 @@ using System;
 using Foundation;
 using UIKit;
 
-namespace Binwell.Controls.FastCollectionView.iOS.Renderers.FastCollection
+namespace Binwell.Controls.FastCollectionView.iOS.FastCollection
 {
     public class FastCollectionDataSource : UICollectionViewSource
     {
